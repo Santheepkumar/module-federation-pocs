@@ -1,0 +1,21 @@
+{
+  "name": "module-federation-post",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"cd host-react-module; npm run dev\" \"cd remote-nextjs-module; npm run dev\" \"cd remote-react-module; npm run dev\"",
+    "ins": "concurrently \"cd host-react-module; npm install\" \"cd remote-nextjs-module; npm install\" \"cd remote-react-module; npm install\""
+  },
+  "private": true,
+  "workspaces": [
+    "host-react-module",
+    "remote-nextjs-module",
+    "remote-react-module"
+  ],
+  "author": "Omher",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^7.1.0"
+  }
+}
